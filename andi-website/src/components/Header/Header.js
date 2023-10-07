@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import Model from "../Model/Model";
 // import { Link } from 'react-router-dom';
@@ -12,9 +12,7 @@ const Header = () => {
     // The Model
     // *******************
     <header className="main-header">
-      <div className="header-topbar">
-        <Model />
-      </div>
+      <Model />
     </header>
 
     // <nav className="navbar">
