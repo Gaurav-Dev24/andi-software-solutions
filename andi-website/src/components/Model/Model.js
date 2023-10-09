@@ -1,6 +1,7 @@
 import React from "react";
 import "./Model.css";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const Model = () => {
   // define objects for inline css
@@ -22,9 +23,11 @@ const Model = () => {
         </div>
         <div className="container-right">
           <div className="container-buttons">
-            <Button>Toll Free Panel</Button>
-            <Button>Missed Call Panel</Button>
-            <Button>SMS Panel</Button>
+            <Link to="/about">
+              <Button>Toll Free Panel</Button>
+              <Button>Missed Call Panel</Button>
+              <Button>SMS Panel</Button>
+            </Link>
             <Button>Whatsapp Panel</Button>
             <Button>Payment</Button>
           </div>
