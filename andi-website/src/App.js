@@ -11,9 +11,9 @@ function App() {
     <Router>
     <Header/>
     <Routes>
-    <Route path="/" exact Component={Home}/>
-        <Route path="/about" exact Component={About}/>
-        <Route path="/cloud" exact Component={Cloud}/>
+      <Route path="/" exact Component={Home}/>
+      <Route path="/about" exact Component={About}/>
+      <Route path="/cloud" exact Component={Cloud}/>
     </Routes>
     </Router>
     
