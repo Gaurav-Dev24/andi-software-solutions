@@ -1,53 +1,61 @@
-.posterImage{
-    height: 400px;
-}
-
-.posterImage > img {
-    margin: auto;
-    display: block;
-    width: 100%;
-}
-
-/* .posterImage__overlay {
+/* Carousel container */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Adjust the height as needed */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Carousel image */
+  .carousel-image {
+    max-width: 100%;
+    max-height: 100%;
     position: absolute;
-    padding: 5rem;
-    bottom: 0px;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: flex-start;
-    background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .carousel-image.active {
     opacity: 1;
-    transition: opacity .3s;
-}   
-
-.posterImage__overlay:hover {
-    opacity: 1;
-}
-
-.posterImage__title {
-    font-weight: 900;
-    font-size: 4rem;
-    margin-bottom: 0.4rem;
-    text-align: left;
-}
-
-.posterImage__runtime {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.posterImage__rating {
-    margin-left: 3rem;
-}
-
-.posterImage__description {
-    font-style: italic;
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-    display: flex;
-    text-align: left;
-    width: 50%;
-} */
+  }
+  
+  /* Optional: Add styles for image captions or indicators */
+  .carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Optional: Add styles for navigation buttons */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-button-prev {
+    left: 10px;
+  }
+  
+  .carousel-button-next {
+    right: 10px;
+  }
+  
